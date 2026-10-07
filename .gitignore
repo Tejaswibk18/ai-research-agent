@@ -1,0 +1,120 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env_venv/
+backend/venv/
+backend/.venv/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ========================
+# AI Agent / Data / Storage
+# ========================
+# SQLite DBs
+*.db
+*.sqlite
+*.sqlite3
+
+# Agent Data Directories
+backend/data/uploads/*
+backend/data/index/*
+!backend/data/uploads/.gitkeep
+!backend/data/index/.gitkeep
+
+# ChromaDB / Vector DBs
+chroma/
+chroma_db/
+.chroma/
+
+# LangGraph checkpoints
+.langgraph/
+checkpoints/
+
+# Downloaded files & temporary assets
+temp/
+tmp/
+scratch/
+*.pdf
+*.docx
+*.txt
+
+# ========================
+# Frontend / Web
+# ========================
+node_modules/
+.npm
+.yarn
+.next/
+out/
+.svelte-kit/
+.nuxt/
+
+# ========================
+# IDEs & Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================
+# OS & System
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+Desktop.ini
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/

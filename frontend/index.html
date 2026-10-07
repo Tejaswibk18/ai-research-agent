@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Research Agent</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                AI
+            </div>
+
+            <div>
+                <h1>Research Agent</h1>
+                <span>AI Engineering Platform</span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="new-chat-btn"
+            id="newChatButton"
+        >
+            <span>+</span>
+            New Chat
+        </button>
+
+
+        <!-- Documents -->
+
+        <div class="sidebar-section">
+
+            <div class="section-header">
+
+                <p class="section-title">
+                    Knowledge Base
+                </p>
+
+                <button
+                    class="upload-small-btn"
+                    id="uploadButton"
+                    title="Upload document"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <div
+                id="documentList"
+                class="document-list"
+            >
+
+                <div class="empty-documents">
+                    No documents yet
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Capabilities -->
+
+        <div class="sidebar-section">
+
+            <p class="section-title">
+                Capabilities
+            </p>
+
+            <div class="capability">
+                <span>◉</span>
+                LLM Assistant
+            </div>
+
+            <div class="capability">
+                <span>◇</span>
+                Document Intelligence
+            </div>
+
+            <div class="capability">
+                <span>⌕</span>
+                Semantic Search
+            </div>
+
+            <div class="capability">
+                <span>⚙</span>
+                Math Calculator
+            </div>
+
+            <div class="capability">
+                <span>🕒</span>
+                Time & Date Awareness
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-footer">
+
+            <span class="status-dot"></span>
+
+            System Online
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header class="header">
+
+            <div>
+
+                <h2>
+                    AI Research Agent
+                </h2>
+
+                <p>
+                    Ask questions, analyze information,
+                    and research complex topics.
+                </p>
+
+            </div>
+
+            <div class="header-status">
+
+                <span class="status-dot"></span>
+
+                Ready
+
+            </div>
+
+        </header>
+
+
+        <!-- Chat -->
+
+        <section
+            class="chat-container"
+            id="chatContainer"
+        >
+
+            <div
+                class="welcome"
+                id="welcomeScreen"
+            >
+
+                <div class="welcome-icon">
+                    ✦
+                </div>
+
+                <h2>
+                    What can I help you research?
+                </h2>
+
+                <p>
+                    Upload documents and ask questions.
+                    Your documents will be processed,
+                    chunked, and converted into Gemini
+                    embeddings for semantic retrieval.
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button class="suggestion">
+                        What time is it right now?
+                    </button>
+
+                    <button class="suggestion">
+                        Calculate 25 * 4 + 10
+                    </button>
+
+                    <button class="suggestion">
+                        What documents have I uploaded?
+                    </button>
+
+                    <button class="suggestion">
+                        Search the knowledge base for 'Transformer'
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Input -->
+
+        <div class="input-area">
+
+            <div class="input-wrapper">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Ask anything..."
+                    rows="1"
+                ></textarea>
+
+                <button
+                    id="sendButton"
+                    class="send-button"
+                    aria-label="Send message"
+                >
+                    ↑
+                </button>
+
+            </div>
+
+            <div class="input-footer">
+
+                <button
+                    class="attach-button"
+                    id="uploadChatButton"
+                >
+                    + Upload Document
+                </button>
+
+                <p class="input-hint">
+                    AI can make mistakes.
+                    Verify important information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Hidden file input -->
+
+<input
+    type="file"
+    id="fileInput"
+    hidden
+    accept=".pdf,.docx,.txt,.md,.csv,.json"
+>
+
+
+<!-- Upload Modal -->
+
+<div
+    class="upload-modal hidden"
+    id="uploadModal"
+>
+
+    <div class="upload-card">
+
+        <button
+            class="modal-close"
+            id="closeUploadModal"
+        >
+            ×
+        </button>
+
+        <div class="upload-icon">
+            ↑
+        </div>
+
+        <h3>
+            Upload Document
+        </h3>
+
+        <p>
+            PDF, DOCX, TXT, Markdown, CSV or JSON
+        </p>
+
+
+        <div
+            class="drop-zone"
+            id="dropZone"
+        >
+
+            <strong>
+                Drop your document here
+            </strong>
+
+            <span>
+                or click to browse
+            </span>
+
+        </div>
+
+
+        <div
+            class="upload-status"
+            id="uploadStatus"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script src="./script.js"></script>
+
+</body>
+
+</html>
